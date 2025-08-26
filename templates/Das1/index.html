@@ -16,7 +16,6 @@
     <meta name="author" content="Phoenixcoded"><!-- [Favicon] icon -->
     <link rel="icon" href="https://ableproadmin.com/assets/images/favicon.svg" type="image/x-icon">
     <!-- [Font] Family -->
-    <link rel="stylesheet" href="{% static '/assets/fonts/inter/inter.css' %}" id="main-font-link">
     <!-- [phosphor Icons] https://phosphoricons.com/ -->
     <link rel="stylesheet" href="{% static '/assets/fonts/phosphor/duotone/style.css' %}">
     <!-- [Tabler Icons] https://tablericons.com -->
@@ -28,12 +27,9 @@
     <link rel="stylesheet" href="{% static '/assets/fonts/material.css' %}"><!-- [Template CSS Files] -->
     <link rel="stylesheet" href="{% static '/assets/css/style.css' %}" id="main-style-link">
     <script src="{% static '/assets/js/tech-stack.js' %}"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-    <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', '');</script>
-    <script
-        type="text/javascript">(function (c, l, a, r, i, t, y) { c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) }; t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i; y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y); })(window, document, "clarity", "script", "");</script>
-    <script defer="defer" src="https://phpstack-207002-5085356.cloudwaysapps.com/pixel/"></script>
     <link rel="stylesheet" href="{% static '/assets/css/style-preset.css' %}">
+    <!-- [Jquery cdn]-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head><!-- [Head] end --><!-- [Body] Start -->
 
 <body data-pc-preset="preset-1" data-pc-sidebar-caption="true" data-pc-layout="vertical" data-pc-direction="ltr"
@@ -46,7 +42,7 @@
     <nav class="pc-sidebar">
         <div class="navbar-wrapper">
             <div class="m-header">
-                    <img src="{% static 'assets/imsges/logo.jpg'}" class="img-fluid logo-lg" alt="logo">
+                    <img src="{% static 'assets/images/user/avatar-2.jpg' %}" class="img-fluid logo-lg" alt="logo">
                 </a>
             </div>
             <div class="navbar-content">
@@ -263,7 +259,7 @@
                                                 alt="user-image" class="user-avtar wid-35"></div>
                                         <div class="flex-grow-1 ms-3">
                                             <h6 class="mb-1">Carson Darrin 🖖</h6><span><a
-                                                    href="https://ableproadmin.com/cdn-cgi/l/email-protection"
+                                                    href="#"
                                                     class="__cf_email__"
                                                     data-cfemail="fb989a89889495d59f9a89899295bb9894968b9a9582d59294">[email&#160;protected]</a></span>
                                         </div>
@@ -416,26 +412,11 @@
         </div>
     </div><!-- [ Header ] end --><!-- [ Main Content ] start -->
     <div class="pc-container">
+        <div id="topic-list">
+            <!--this is where the data gets inserted from js-->
+        </div>
 
     </div><!-- [ Main Content ] end -->
-    <footer class="pc-footer">
-        <div class="footer-wrapper container-fluid">
-            <div class="row">
-                <div class="col my-1">
-                    <p class="m-0">© Able Pro crafted with ♥ by Team Phoenixcoded</a></p>
-                </div>
-                <div class="col-auto my-1">
-                    <ul class="list-inline footer-link mb-0">
-                        <li class="list-inline-item"><a href="https://ableproadmin.com/index.html">Home</a></li>
-                        <li class="list-inline-item"><a href="https://phoenixcoded.gitbook.io/able-pro/"
-                                target="_blank">Documentation</a></li>
-                        <li class="list-inline-item"><a href="https://phoenixcoded.authordesk.app/"
-                                target="_blank">Support</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
     <div class="pct-c-btn"><a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvas_pc_layout"><i
                 class="ph-duotone ph-gear-six"></i></a></div>
     <div class="offcanvas border-0 pct-offcanvas offcanvas-end" tabindex="-1" id="offcanvas_pc_layout">
@@ -605,28 +586,17 @@
                 </ul>
             </div>
         </div>
-    </div><!-- [Page Specific JS] start -->
-    <script data-cfasync="false" src="{% static 'cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js' %}"></script>
-    <script src="{% static 'assets/js/plugins/apexcharts.min.js' %}"></script>
-    <script src="{% static 'assets/js/widgets/all-earnings-graph.js' %}"></script>
-    <script src="{% static 'assets/js/widgets/page-views-graph.js' %}"></script>
-    <script src="{% static 'assets/js/widgets/total-task-graph.js' %}"></script>
-    <script src="{% static 'assets/js/widgets/download-graph.js' %}"></script>
-    <script src="{% static 'assets/js/widgets/customer-rate-graph.js' %}"></script>
-    <script src="{% static 'assets/js/widgets/tasks-graph.js' %}"></script>
-    <script src="{% static 'assets/js/widgets/total-income-graph.js' %}"></script>
-    <!-- [Page Specific JS] end --><!-- Required Js -->
+    </div>
+    <!-- [Page Specific JS] end -->
+    <script src="{% static 'assets/js/dashboard.js' %}"></script>
+    <!-- Required Js -->
     <script src="{% static 'assets/js/plugins/popper.min.js' %}"></script>
     <script src="{% static 'assets/js/plugins/simplebar.min.js' %}"></script>
     <script src="{% static 'assets/js/plugins/bootstrap.min.js' %}"></script>
-    <script src="{% static 'assets/js/plugins/i18next.min.js' %}"></script>
-    <script src="{% static 'assets/js/plugins/i18nextHttpBackend.min.js' %}"></script>
     <script src="{% static 'assets/js/icon/custom-font.js' %}"></script>
     <script src="{% static 'assets/js/script.js' %}"></script>
     <script src="{% static 'assets/js/theme.js' %}"></script>
-    <script src="{% static 'assets/js/multi-lang.js' %}"></script>
     <script src="{% static 'assets/js/plugins/feather.min.js' %}"></script>
-    <script defer="defer" src="https://fomo.codedthemes.com/pixel/CDkpF1sQ8Tt5wpMZgqRvKpQiUhpWE3bc"></script>
     <script>layout_change('light');</script>
     <script>change_box_container('false');</script>
     <script>layout_caption_change('true');</script>
